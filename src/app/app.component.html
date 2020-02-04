@@ -11,7 +11,7 @@
       </button>
     </div>
     <section class="Items">
-      <h2>Unpacked Items {{data.length}}</h2>
+      <h2>Unpacked Items ({{data.length}})</h2>
       <input class="Items-searchTerm" [(ngModel)]="Filtername" />
       <div *ngFor="let value of data | filterPipe:Filtername; let i = index">
         <article class="Item">
@@ -29,7 +29,7 @@
       </div>
     </section>
     <section class="Items">
-      <h2>Packed Items {{data1.length}}</h2>
+      <h2>Packed Items ({{data1.length}})</h2>
       <input class="Items-searchTerm" [(ngModel)]="FilterName" />
       <div *ngFor="let d1 of data1 | filterPipe:FilterName;let i = index">
         <article class="Item">
