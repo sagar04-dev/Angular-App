@@ -1,0 +1,51 @@
+div {
+  text-align: center;
+}
+.Application {
+  margin: auto;
+  max-width: 400px;
+  font-size: 72%;
+}
+.NewItem {
+  display: flex;
+}
+.NewItem-input {
+  width: 100%;
+}
+input {
+  padding: 0.5em;
+  border: 1px solid #f32e5b;
+  background-color: #fbbfcd;
+}
+button,
+.button,
+input[type="submit"] {
+  background-color: #f32e5b;
+  border: 1px solid #e10d3d;
+  color: white;
+  padding: 0.5em;
+  transition: all 0.2s;
+  font-size: 110%;
+}
+.Items-searchTerm {
+  background-color: white;
+  margin-bottom: 0.5em;
+  width: 96%;
+}
+.Item-remove {
+  background-color: white;
+  color: #f65e81;
+  border: none;
+  margin-left: 1em;
+  outline: none;
+  padding: 0;
+}
+button.full-width,
+.button.full-width,
+input[type="submit"].full-width {
+  width: 100%;
+  margin: 1em 0;
+}
+.Items {
+  text-align: left;
+}

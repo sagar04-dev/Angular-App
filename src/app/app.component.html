@@ -1,0 +1,55 @@
+<div id="application">
+  <div class="Application">
+    <div class="NewItem">
+      <input type="text" class="NewItem-input" [(ngModel)]="name" value="" />
+      <button
+        type="submit"
+        class="NewItem-submit button"
+        (click)="sendValues(name)"
+      >
+        Submit
+      </button>
+    </div>
+    <section class="Items">
+      <h2>Unpacked Items {{data.length}}</h2>
+      <input class="Items-searchTerm" [(ngModel)]="Filtername" />
+      <div *ngFor="let value of data | filterPipe:Filtername; let i = index">
+        <article class="Item">
+          <label for="0"
+            ><input
+              type="checkbox"
+              (click)="checkvalue(value)"
+              value="on"
+              id="i"
+            />{{value}}</label
+          ><button class="Item-remove" (click)="removeItem(value)">
+            Remove
+          </button>
+        </article>
+      </div>
+    </section>
+    <section class="Items">
+      <h2>Packed Items {{data1.length}}</h2>
+      <input class="Items-searchTerm" [(ngModel)]="FilterName" />
+      <div *ngFor="let d1 of data1 | filterPipe:FilterName;let i = index">
+        <article class="Item">
+          <label for="4"
+            ><input
+              type="checkbox"
+              ng-model="checked"
+              checked="true"
+              id="i"
+              value="on"
+              (click)="reverseValue(d1)"
+            />{{d1}}</label
+          ><button class="Item-remove" (click)="removePackedItem(d1)">
+            Remove
+          </button>
+        </article>
+      </div>
+    </section>
+    <button class="button full-width" (click)="allUnpacked()">
+      Mark All As Unpacked
+    </button>
+  </div>
+</div>
