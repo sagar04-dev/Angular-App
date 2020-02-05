@@ -6,10 +6,18 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent implements OnInit {
-  data = ["pants", "shirts", "cotton", "jeans", "troueser", "tshirts"];
-  data1 = ["sleeping pills", "unsleeping pills", "some sleeping pills"];
+  data = [
+    "Pants",
+    "Jacket",
+    "iPhone Charger",
+    "MacBook",
+    "Underwear",
+    "Hat",
+    "T-Shirts",
+    "Belt"
+  ];
+  data1 = ["Sleeping Pills", "Passport", "Sandwich"];
   name: string;
-  ngOnInit() {}
   sendValues() {
     if (this.name) {
       this.data.unshift(this.name);
