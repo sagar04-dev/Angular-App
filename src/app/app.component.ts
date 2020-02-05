@@ -8,11 +8,13 @@ import { Component, OnInit } from "@angular/core";
 export class AppComponent implements OnInit {
   data = ["pants", "shirts", "cotton", "jeans", "troueser", "tshirts"];
   data1 = ["sleeping pills", "unsleeping pills", "some sleeping pills"];
+  name: string;
   ngOnInit() {}
-  sendValues(value: string) {
-    if (value) {
-      this.data.unshift(value);
+  sendValues() {
+    if (this.name) {
+      this.data.unshift(this.name);
     }
+    this.name = "";
   }
   checkvalue(item) {
     if (item) {
